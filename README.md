@@ -7,17 +7,18 @@
   
   1.3. .....Installation abwarten und in Fedora booten.
 
-####**2. Stanradprogramme installieren**
+####**2. Standradprogramme installieren**
   2.1. Github:
   
     sudo yum install git
-    
-  2.1. Esaylife installieren [link](http://easylifeproject.org/) und dort die passende Software auswaehlen
   
-  2.2. Firefox:
+  2.1. Firefox:
   
-    sudo yum install Firefox
+    sudo yum install firefox
+  
+  2.2. Esaylife installieren [link](http://easylifeproject.org/) und dort die passende Software auswaehlen
+  
     
   2.3. Virtualbox:
   
-    sudo yum install VirutalBox
+    sudo yum install VirtualBox
