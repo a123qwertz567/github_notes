@@ -22,3 +22,11 @@
   2.3. Virtualbox:
   
     sudo yum install VirtualBox
+    
+  2.4. VLC:
+
+    sudo yum install vlc
+    
+    http://mp3.ht-stream.net
+    
+  2.5
