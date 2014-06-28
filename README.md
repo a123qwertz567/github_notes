@@ -1,13 +1,13 @@
-##Fedora 20 aufsetzten für Stefan
+###Fedora 20 aufsetzten für Stefan
 
-###1. Installation
+#####1. Installation
   1.1. Lankabel einstecken und Bootstick booten
   
   1.2. Installation Konfigurieren, bei der Festplattengeschichte „automatisch“ und „als Filesystem „Btrfs“
   
   1.3. .....Installation abwarten und in Fedora booten.
 
-###2. Standardprogramme installieren
+#####2. Standardprogramme installieren
   2.1. Github:
   
     sudo yum install git
