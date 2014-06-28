@@ -7,7 +7,7 @@
   
   1.3. .....Installation abwarten und in Fedora booten.
 
-####**2. Standradprogramme installieren**
+####**2. Standardprogramme installieren**
   2.1. Github:
   
     sudo yum install git
