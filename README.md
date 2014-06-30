@@ -16,6 +16,14 @@
   
     sudo yum install firefox
   
+  2.1.1 ff zum Standardbrowser machen
+  
+  "Systemeinstellungen" > "Standard-Komponenten" > "Webbrowser" > in die Zeile
+  
+    firefox
+    
+  eintippen
+  
   2.2. easylifeproject installieren [link](http://easylifeproject.org/) und dort die passende Software auswaehlen
   
     
@@ -33,6 +41,12 @@
   
     sudo yum install steam
   
+  2.6 zshel
+  
+    sudo yum zsh
+    
+  config ggf anpassen
+  
 #####3. fstab anpassen
   listet dev und UUIDS und FSTYPE
   
@@ -49,14 +63,22 @@
     # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info                                          
     #     
     #ssd
-    UUID=b07ffb1a-b4b7-4c01-a261-2fead4da1f17 /                       btrfs   subvol=root     0 0                        
-    UUID=1030e0dd-496c-42f9-a6c0-1bea391ac160 /boot                   ext4    defaults        1 2                        
-    UUID=b07ffb1a-b4b7-4c01-a261-2fead4da1f17 /home                   btrfs   subvol=home     0 0                        
+    UUID=b07ffb1a-b4b7-4c01-a261-2fead4da1f17 /                       btrfs   subvol=root     0 0                 
+    UUID=1030e0dd-496c-42f9-a6c0-1bea391ac160 /boot                   ext4    defaults        1 2
+    UUID=b07ffb1a-b4b7-4c01-a261-2fead4da1f17 /home                   btrfs   subvol=home     0 0
     UUID=e4f2a4c3-15e5-451f-9a35-bbd0ca1287a3 swap                    swap    defaults        0 0
     #500GB
     UUID=8f74da78-2bfa-4bbd-8b7d-44965ef75f44 /home/a123qwertz567/mount/500GB ext4 defaults   0 0
     #1500GB
     UUID=561865D21865B1A3	/home/a123qwertz567/mount/1500GB	ntfs	defaults	0 0
+    
+   Berechtigungen pruefen
+   
+    ls -l /home/a123qwertz567/mount/1500GB && ls -l /home/a123qwertz567/mount/500GB 
+
+    
+#####4. In Dolphin das "loeschen" aktivieren
+  "Einstellungen" > "Dolphin einrichten" > "Dienste" > "Loeschen" (Checkbox aktivieren)
 
 
 
