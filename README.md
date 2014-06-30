@@ -68,9 +68,9 @@
     UUID=b07ffb1a-b4b7-4c01-a261-2fead4da1f17 /home                   btrfs   subvol=home     0 0
     UUID=e4f2a4c3-15e5-451f-9a35-bbd0ca1287a3 swap                    swap    defaults        0 0
     #500GB
-    UUID=8f74da78-2bfa-4bbd-8b7d-44965ef75f44 /home/a123qwertz567/mount/500GB ext4 defaults   0 0
+    UUID=8f74da78-2bfa-4bbd-8b7d-44965ef75f44 /home/a123qwertz567/mount/500GB ext4 defaults,users   0 0
     #1500GB
-    UUID=561865D21865B1A3	/home/a123qwertz567/mount/1500GB	ntfs	defaults	0 0
+    UUID=561865D21865B1A3	/home/a123qwertz567/mount/1500GB	ntfs	defaults,users	0 0
     
    Berechtigungen pruefen
    
@@ -79,6 +79,30 @@
     
 #####4. In Dolphin das "loeschen" aktivieren
   "Einstellungen" > "Dolphin einrichten" > "Dienste" > "Loeschen" (Checkbox aktivieren)
+  
+#####5. RAID1 einrichten
+  2x 1TB Platzten anschliesen und NICHT mounten
+  
+  eine Platte sollte "btrfs" als FS haben
+  
+  HIER EINFUEGEN WIE MAN BTRFS MACHT
+  
+  dann der [Anleitung](https://btrfs.wiki.kernel.org/index.php/Using_Btrfs_with_Multiple_Devices#Adding_new_devices) folgen:
+  
+    mount /dev/sdX1 /home/a123qwertz567/mount/raid1
+    btrfs device add /dev/sdX2 /home/a123qwertz567/mount/raid1
+    btrfs balance start -dconvert=raid1 -mconvert=raid1 /home/a123qwertz567/mount/raid1
+    
+   btrfs Staus auslesen
+   
+      btrfs fi show
+      
+   RAID1 in die fstab via UUID einfuegen
+   
+      #RAID1
+      UUID=9638bb18-4639-4617-b322-c26c6e9d2675	/home/a123qwertz567/mount/raid1		btrfs	defaults,users	0 0
+    
+
 
 
 
