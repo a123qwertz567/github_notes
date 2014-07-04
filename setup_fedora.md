@@ -47,6 +47,10 @@
     
   config ggf anpassen
   
+  2.7 htop
+  
+    sudo yum install htop
+  
 #####3. fstab anpassen
   listet dev und UUIDS und FSTYPE
   
@@ -104,6 +108,6 @@
     
 
 
+convert -density 300 -resize 100% -quality 85 a.pdf a.png
 
-
-                                      
+convert dubbel_1.png dubbel_2.png dubbel_3.png dubbel_4.png dubbel_lastfaelle.pdf
